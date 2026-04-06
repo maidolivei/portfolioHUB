@@ -85,11 +85,53 @@ footer {
     <h3>🧮 Calculadora</h3>
     <p>Projeto simples usando JavaScript para treinar lógica.</p>
   </div>
+  <div class="card">
+  <h3>🧮 Calculadora</h3>
+
+  <input type="text" id="display" style="width:100%;height:40px;margin-bottom:10px;text-align:right;" readonly>
+
+  <div>
+    <button onclick="add('7')">7</button>
+    <button onclick="add('8')">8</button>
+    <button onclick="add('9')">9</button>
+    <button onclick="add('/')">÷</button>
+  </div>
+
+  <div>
+    <button onclick="add('4')">4</button>
+    <button onclick="add('5')">5</button>
+    <button onclick="add('6')">6</button>
+    <button onclick="add('*')">×</button>
+  </div>
+
+  <div>
+    <button onclick="add('1')">1</button>
+    <button onclick="add('2')">2</button>
+    <button onclick="add('3')">3</button>
+    <button onclick="add('-')">-</button>
+  </div>
+
+  <div>
+    <button onclick="add('0')">0</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="add('+')">+</button>
+  </div>
+</div>
 
   <div class="card">
     <h3>📝 Lista de tarefas</h3>
     <p>Aplicação básica para organizar tarefas.</p>
   </div>
+
+  <div class="card">
+  <h3>📝 Lista de Tarefas</h3>
+
+  <input type="text" id="taskInput" placeholder="Digite uma tarefa">
+  <button onclick="addTask()">Adicionar</button>
+
+  <ul id="taskList"></ul>
+</div>
 
 </section>
 
