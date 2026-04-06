@@ -157,5 +157,35 @@ footer {
 
 </div>
 
+<script>
+function add(value) {
+  document.getElementById("display").value += value;
+}
+
+function calculate() {
+  try {
+    document.getElementById("display").value =
+      eval(document.getElementById("display").value);
+  } catch {
+    alert("Erro");
+  }
+}
+
+function clearDisplay() {
+  document.getElementById("display").value = "";
+}
+
+function addTask() {
+  const input = document.getElementById("taskInput");
+  const li = document.createElement("li");
+
+  li.textContent = input.value;
+  li.onclick = () => li.remove();
+
+  document.getElementById("taskList").appendChild(li);
+  input.value = "";
+}
+</script>
+  
 </body>
 </html>
