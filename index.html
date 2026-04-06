@@ -82,7 +82,6 @@ footer {
   <h2>🚀 Projetos</h2>
 
   <div class="card">
-    <h3>🧮 Calculadora</h3>
     <p>Projeto simples usando JavaScript para treinar lógica.</p>
   </div>
   <div class="card">
@@ -163,11 +162,16 @@ function add(value) {
 }
 
 function calculate() {
+  let display = document.getElementById("display");
+
+  if (display.value === "") {
+    return;
+  }
+
   try {
-    document.getElementById("display").value =
-      eval(document.getElementById("display").value);
+    display.value = eval(display.value);
   } catch {
-    alert("Erro");
+    alert("Conta inválida");
   }
 }
 
@@ -177,8 +181,10 @@ function clearDisplay() {
 
 function addTask() {
   const input = document.getElementById("taskInput");
-  const li = document.createElement("li");
 
+  if (input.value === "") return;
+
+  const li = document.createElement("li");
   li.textContent = input.value;
   li.onclick = () => li.remove();
 
